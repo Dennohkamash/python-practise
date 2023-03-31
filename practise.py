@@ -74,10 +74,10 @@
 class BankAccount:
     #initializing a constructor with attributes
     def __init__(self,account_number,balance,date_of_opening,customer_name):
-        self.account_number = input("Enter acc no")
+        self.account_number = account_number
         self.balance = balance
-        self.date_of_opening = input("Enter opening date")
-        self.customer_name = input("Enter name")
+        self.date_of_opening = date_of_opening
+        self.customer_name = customer_name
     #create method deposit
     def deposit(self,amount):
         # self.balance = self.balance + amount
