@@ -107,12 +107,12 @@ customer3=BankAccount()
 customer4=BankAccount()
 #calling the methods customer details
 customer1.customer_details()
-# customer2.customer_details()
+customer2.customer_details()
 #checkbalance
-# customer3.checkbalance()
+customer3.checkbalance()
 #withdrawing
-# customer4.withdraw(30000)
-# customer4.withdraw(20000)
+customer4.withdraw(30000)
+customer4.withdraw(20000)
 
 
 
