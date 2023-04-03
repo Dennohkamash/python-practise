@@ -71,6 +71,7 @@
 #  and methods like deposit, withdraw, and check_balance,customer_details.
 #one should be able to check balance,withdraw and  deposit.
 
+from datetime import datetime
 class BankAccount:
     #initializing a constructor with attributes
     def __init__(self,account_number,balance,date_of_opening,customer_name):
@@ -79,46 +80,30 @@ class BankAccount:
         self.date_of_opening = date_of_opening
         self.customer_name = customer_name
     #create method deposit
-    def deposit(self,amount):
+    def deposit(self,amount,datetime):
+        datetime = datetime.now()
         # self.balance = self.balance + amount
         self.balance += amount
-        print(f"{amount} has been deposited on your account")
+        print(f"{amount} has been deposited on your account at {datetime}")
     #method withdraw
-    def withdraw(self,amount):
+    def withdraw(self,amount,datetime):
+        datetime = datetime.now()
         if amount > self.balance:
             print(f"Insufficient funds your current balance is{self.balance}")
         else:
             # self.balance = self.balance - amount
             self.balance -= amount
-            print(f"withdrawal succeful you have withdrawn {amount} you current balance is {self.balance}")
+            print(f"withdrawal succeful you have withdrawn {amount} you current balance is {self.balance} at {datetime}")
     #method checkbalance
-    def checkbalance(self):
-        print(f"current balance is {self.balance}")
+    def checkbalance(self,datetime):
+        datetime = datetime.now()
+        print(f"current balance is {self.balance} {datetime}")
     #method customer details
     def customer_details(self):
         print(f"Name:{self.customer_name}")
         print(f"Accountnumber:{self.account_number}")
         print(f"Date of Opening:{self.date_of_opening}")
         print(f"Balance:{self.balance}")
-#inputing customer details
-customer1=BankAccount()
-customer2=BankAccount()
-customer3=BankAccount()
-customer4=BankAccount()
-#calling the methods customer details
-customer1.customer_details()
-customer2.customer_details()
-#checkbalance
-customer3.checkbalance()
-#withdrawing
-customer4.withdraw(30000)
-customer4.withdraw(20000)
-
-
-
-
-
-
 
 
 
